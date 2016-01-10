@@ -34,6 +34,8 @@ EXPOSE 443
 # Add service config files
 ADD conf/fastcgi.conf /etc/nginx/
 ADD conf/nginx.conf /etc/nginx/
+ADD conf/php.ini-production /etc/php/7.0/fpm/php.ini
+ADD conf/php.ini-production /etc/php/7.0/cli/php.ini
 
 # Add Supervisord config files
 ADD conf/cron.sv.conf /etc/supervisor/conf.d/
