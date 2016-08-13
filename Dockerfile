@@ -6,16 +6,17 @@ MAINTAINER elarasu@outlook.com
 
 # Install requirements
 RUN  apt-get update  \
-  && apt-get install -yq software-properties-common \
-  && add-apt-repository ppa:ondrej/php \
-  && apt-get upgrade -y \
-  && apt-get install -yq ssh nodejs sudo cron git sendmail fetchmail ca-certificates nodejs-legacy npm python-pygments \
+  && apt-get install -yq software-properties-common ssh nodejs sudo cron git sendmail fetchmail ca-certificates nodejs-legacy npm python-pygments \
        build-essential g++ nginx --no-install-recommends
+
+  #&& apt-get install -yq software-properties-common \
+  #&& add-apt-repository ppa:ondrej/php \
+  #&& apt-get update \
 
 # Install php components
 RUN  add-apt-repository ppa:ondrej/php \
-  && apt-get update
-RUN  apt-get install -yq php7.0 php7.0-fpm php7.0-mysql \
+  && apt-get update \
+  && apt-get install -yq php7.0 php7.0-fpm php7.0-mysql \
        php7.0-mcrypt php7.0-intl php7.0-gd php7.0-dev php7.0-curl php7.0-ldap php7.0-imap php-pear --no-install-recommends \
   && rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
 

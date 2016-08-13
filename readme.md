@@ -7,6 +7,8 @@ Please refer to the Dockerfile for details.
  * nginx
  * php7-fpm
  * composer
+ * sendmail/fetchmail
+ * nodejs/npm
 
 # To include within your Dockerfile
 
