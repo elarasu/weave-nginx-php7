@@ -17,7 +17,7 @@ RUN  apt-get update  \
 RUN  add-apt-repository ppa:ondrej/php \
   && apt-get update \
   && apt-get install -yq php7.0 php7.0-fpm php7.0-mysql \
-       php7.0-mcrypt php7.0-intl php7.0-gd php7.0-dev php7.0-curl php7.0-ldap php7.0-imap php-pear --no-install-recommends \
+       php7.0-mcrypt php7.0-intl php7.0-gd php7.0-dev php7.0-curl php7.0-ldap php7.0-imap php7.0-mbstring php7.0-soap php-pear --no-install-recommends \
   && rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
 
 # Composer
